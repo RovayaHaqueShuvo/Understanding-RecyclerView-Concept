@@ -1,10 +1,14 @@
 package com.own_world.undastadingrecyclerview
 
 import android.content.Context
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.own_world.undastadingrecyclerview.databinding.RvViewStructureBinding
+import com.shashank.sony.fancytoastlib.FancyToast
+
 
 //Inatializing RecyclerView Element and Adapter
 class RvAdapter(var dataList: ArrayList<DataModel>, var context: Context):RecyclerView.Adapter<RvAdapter.ViewHolder>() {
@@ -26,6 +30,10 @@ class RvAdapter(var dataList: ArrayList<DataModel>, var context: Context):Recycl
         holder.binding.pizzaicon.setImageResource(dataList.get(position).profile)
         holder.binding.name.text = dataList.get(position).name
         holder.binding.available.text = dataList.get(position).address
+    holder.itemView.setOnClickListener {
+        //Toast.makeText(context, "Click Listen", Toast.LENGTH_LONG).show()
+
+    }
     }
 
 //Inatializing ViewHolder
