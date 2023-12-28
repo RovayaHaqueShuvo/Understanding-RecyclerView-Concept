@@ -10,8 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.own_world.undastadingrecyclerview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    //Active binding mode
     private lateinit var binding: ActivityMainBinding
+
+    //RecyclerView
     private lateinit var rvAdapter: RvAdapter
+
+    //Data List
     private lateinit var dataList: ArrayList<DataModel>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,28 +25,33 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
         dataList = ArrayList<DataModel>()
+//      Customize  dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
+        dataList.add(DataModel(R.drawable.pizza, "Pizza Inn", "5 Pices"))
 
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
-        dataList.add(DataModel(R.drawable.pizza,"Pizza Inn","5 Pices"))
+        //passing Context and dataList to RvAdapter
+        rvAdapter = RvAdapter(dataList, this@MainActivity)
 
-        rvAdapter = RvAdapter(dataList,this@MainActivity)
+        //Setting style Type
         binding.rv.layoutManager = LinearLayoutManager(this@MainActivity)
+
+        //Connect Xml File with Adapter
         binding.rv.adapter = rvAdapter
     }
 }
