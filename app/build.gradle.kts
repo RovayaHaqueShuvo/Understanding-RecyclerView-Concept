@@ -52,4 +52,10 @@ dependencies {
 
     //fancyToast dependency
     implementation ("io.github.shashank02051997:FancyToast:2.0.2")
+
+
+    //motion dependency
+    implementation ("com.github.Spikeysanju:MotionToast:1.4")
+
+
 }

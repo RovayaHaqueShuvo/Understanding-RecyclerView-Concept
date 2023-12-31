@@ -5,7 +5,6 @@ pluginManagement {
                 includeGroupByRegex("com\\.android.*")
                 includeGroupByRegex("com\\.google.*")
                 includeGroupByRegex("androidx.*")
-                maven { url =uri("https://jitpack.io") }
                 mavenCentral()
             }
         }

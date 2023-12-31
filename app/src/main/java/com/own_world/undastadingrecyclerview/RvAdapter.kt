@@ -1,13 +1,17 @@
 package com.own_world.undastadingrecyclerview
 
+import android.app.Activity
 import android.content.Context
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.own_world.undastadingrecyclerview.databinding.RvViewStructureBinding
 import com.shashank.sony.fancytoastlib.FancyToast
+import www.sanju.motiontoast.MotionToast
+import www.sanju.motiontoast.MotionToastStyle
 
 
 //Inatializing RecyclerView Element and Adapter
@@ -32,6 +36,15 @@ class RvAdapter(var dataList: ArrayList<DataModel>, var context: Context):Recycl
         holder.binding.available.text = dataList.get(position).address
     holder.itemView.setOnClickListener {
         //Toast.makeText(context, "Click Listen", Toast.LENGTH_LONG).show()
+
+        MotionToast.darkColorToast(
+            context as Activity,
+            "On Clicked 😍",
+            "MotionToast Work successfully!",
+            MotionToastStyle.SUCCESS,
+            MotionToast.GRAVITY_BOTTOM,
+            MotionToast.SHORT_DURATION,
+            ResourcesCompat.getFont(context, www.sanju.motiontoast.R.font.helvetica_regular))
 
     }
     }
